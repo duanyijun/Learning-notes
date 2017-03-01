@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        //        $().css()  $().html()  $()  $().val()   :只能给JQ对象用
+        //        $.xxx()  $.yyy()  $.zzz()  :能给JQ对象用,也能给原生JS用，称为工具方法
+        //        $=jQuery,但是JQuery不是独有的接口
+//noConflict() : 防止冲突
+//parseJSON() :把字符串数据转换为json类型
+        //makeArray() :把类数组转化成真正的数组
+        var dakang = $.noConflict(); //dakang代替了$;
+        var $ = 10;
+        dakang(function () {
+            dakang("body").css("background","red");
+            alert($);
+            });
+        var sta = '{"name":"张璐"}';
+        alert(dakang.parseJSON(sta).name)
+
+        window.onload = function(){
+            var aDiv = document.getElementsByTagName("div");  //类数组
+            //aDiv.push();// 会报错
+            dakang.makeArray(aDiv).push();  //先转化为真正的数组，然后再去用，不会报错
+
+        }
+    </script>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

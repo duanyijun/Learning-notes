@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+    ev.data  数据
+    ev.target  当前操作的事件源
+    ev.type  事件类型
+    -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#div1").on("click",{name:"hello"},function(ev){
+//                alert(ev.data.name);
+//                alert(ev.target);
+                alert(ev.type);
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="div1">aaaaa</div>
+</body>
+</html>

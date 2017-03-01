@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+            $("div").click(function(){
+                alert(12);
+            });
+            var oDiv = $("div").remove();  //删除元素并删除元素的所有事件
+//            var oDiv  = $("div").detach();  //只删除元素的样式
+            $("body").append(oDiv);
+
+        })
+    </script>
+</head>
+<body>
+<div>div1<span>span</span></div>
+
+</body>
+</html>

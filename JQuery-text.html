@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+            alert($("div").html());
+            alert($("div").text()); //会获取到所有的内容（特例）
+            $("div").text("<h3>h3</h3>") //会把输入的标签转化为文本
+
+        })
+    </script>
+</head>
+<body>
+<div>div1<span>aaaa</span></div>
+<div>div2</div>
+<div>div3</div>
+</body>
+</html>

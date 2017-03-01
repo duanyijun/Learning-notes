@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        //        $.extend();扩展工具方法下的扩展形式$.xxx(), $.yyy();
+        //        $.fn.extend();扩展到JQ对象下的插件形式$().xxx(),$().yyy();
+        $.extend({
+            leftTrim: function (str) {
+                return str.replace(/^\s+/, "");
+            }
+        });  //去左边空格的插件
+    </script>
+    <script>
+        //$.trim();去左右空格
+        //$.leftTrim();没有去左边空格的，写一个插件
+        var str = "   hello   ";
+        alert("(" + $.leftTrim(str) + ")");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

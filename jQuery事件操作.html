@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+//        delegate()事件委托
+//        undelegate()阻止事件委托
+//        trigger()主动执行
+        $(function () {
+//            $("li").on("click",function(){
+//                $(this).css("background","red");
+//            })
+
+//            $("ul").delegate("li","click",function(){
+//                $(this).css("background","red");
+//                $("ul").undelegate(); //阻止事件委托
+//            })
+            $("li").on("click",function(){
+                alert("你点了我");
+            });
+            $("div").trigger("click");//主动触发
+
+        })
+
+    </script>
+</head>
+<body>
+
+<div>点我</div>
+<ul>
+    <li>11111</li>
+    <li>11111</li>
+    <li>11111</li>
+    <li>11111</li>
+    <li>11111</li>
+</ul>
+</body>
+</html>

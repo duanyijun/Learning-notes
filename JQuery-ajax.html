@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $.ajax({
+            url:'xxx.php',
+            data:'name=hello&age=20',
+            type:'POST',//默认是GET
+            success:function(){
+                alert("成功")
+            },
+            error:function(){
+                alert("失败")
+            }
+        });
+
+        //推荐使用下面的方式
+        // Assign handlers immediately after making the request,
+        // and remember the jqXHR object for this request
+        //指定处理程序立即请求后,记住jqXHR对象请求
+        var jqxhr = $.ajax( "example.php" )
+                .done(function() {
+                    alert( "success" );
+                })
+                .fail(function() {
+                    alert( "error" );
+                })
+                .always(function() {
+                    alert( "complete" );
+                });
+
+        // Perform other work here ...
+        //执行其他工作
+
+        // Set another completion function for the request above
+//        设置另一个完成功能上面的请求
+        jqxhr.always(function() {
+            alert( "second complete" );
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

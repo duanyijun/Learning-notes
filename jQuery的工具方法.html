@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        //        type();判断类型,判断的类型多了
+        //        trim();去掉前后空格
+        //        inArray();类似于indexOf
+        //        proxy();改变this的指向
+        //        $().css()  $().html()  $()  $().val()   :只能给JQ对象用
+        //        $.xxx()  $.yyy()  $.zzz()  :能给JQ对象用,也能给原生JS用，称为工具方法
+        $(function () {
+//            var a = "hello";
+//            alert(typeof a);  //原生判断类型
+//            alert($.type(a));
+//            var str = "  hello  ";
+//            alert("(" + $.trim(str) + ")");
+//
+//            var att = ["a", "b", "c", "d"];
+//            alert($.inArray("b", att));   //再att数组中找到b的位置，没有返回值为-1
+
+            function show(n,y){
+                alert(this);
+                alert(n);
+                alert(y);
+            }
+//            show();
+
+//            $.proxy(show,document)(4,5); //后面的小括号表示执行了show这个函数
+            $(document).click($.proxy(show,window,4,5));
+        })
+    </script>
+</head>
+<body>
+</body>
+</html>
