@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<script>
+
+    $(function(){
+        $("#div1").hover(function(){
+
+//            $(this).css("background","blue"); //改变背景色为蓝色
+//            $("#div2").fadeOut(2000); //淡入，2000是执行的时间
+//            $("#div2").show(2000); //出现
+//            $("#div2").slideDown(); //向下卷出
+            $("#div2").fadeTo(1000,0.1); //透明度到0.1
+
+        },function(){
+
+//            $(this).css("background","red"); //改变背景色为红色
+//            $("#div2").fadeIn(2000); //淡出
+//            $("#div2").hide(2000); //隐藏
+//            $("#div2").slideUp(); //向上卷起
+            $("#div2").fadeTo(1000,1); //透明度到1
+        })
+    })
+</script>
+</body>
+</html>

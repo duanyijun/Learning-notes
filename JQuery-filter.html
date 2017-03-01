@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <Script>
+        $(function(){
+            //filter 过滤，针对元素自身
+            //not filter的反义词
+            //$("div").filter(".hello").css("background","red");
+            //$("div").not(".hello").css("background","red");
+            //$("div").has("span").css("background","red");//所有元素里面包含span的选择出来
+            $("div").has(".box").css("background","red");//在div里面包含box的元素选择出来
+        });
+    </Script>
+</head>
+<body>
+<div class="hello">div1<span class="box">111</span></div>
+<div class="box">div2</div>
+</body>
+</html>

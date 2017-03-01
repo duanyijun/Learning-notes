@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <Script>
+        $(function () {
+//            next 下一个元素
+//            prve 上一个元素
+//            find 查找
+//            eq 下标
+//            index 索引，当前元素在所有兄弟节点中的位置
+//            $("div").next().css("background","red");
+//            $("div").find("h2").css("background","red");
+//            $("div").find("h2").eq(1).css("background","red");
+            alert($("#h").index());
+        })
+    </Script>
+</head>
+<body>
+<div>
+    <h2>2</h2>
+    <h3>3</h3>
+    <h2>2</h2>
+    <h3 id="h">3</h3>
+    <h2>2</h2>
+</div>
+<!--<div>div</div>-->
+<!--<span>span</span>-->
+<!--<p>p</p>-->
+</body>
+</html>

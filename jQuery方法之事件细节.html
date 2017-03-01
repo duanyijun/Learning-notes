@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function () {
+            //$("div").click(function () {
+            //ev:even对象
+            //ev.pageX(相对于文档的) : clientX(相对于可视区)
+            //ev.watch() : keyCode 键值，watch可获取左右鼠标点击的值
+            //ev.preventDefault();//阻止默认事件
+            //ev.stopPropagation();//阻止冒泡事件
+            //return false; //阻止默认事件 + 冒泡事件
+
+
+            //})
+//            $("div").on("click", function () {
+//                alert(123)
+//            })
+            $("div").one("click",function(){
+                alert(456)
+            });      //事件执行一次的方法
+        });
+
+    </script>
+</head>
+<body>
+<div>div</div>
+<span>span</span>
+</body>
+</html>

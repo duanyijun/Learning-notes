@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function () {
+            //$("span").insertBefore($("div"));   //把span放到div之前 insertBefore
+            //$("div").insertAfter($("span"));   //把span放到div之后  insertAfter
+            //$("span").appendTo($("div"));   //把span放到div里面,在div里面的内容之后  appendTo
+            //$("span").prependTo($("div"));   //把span放到div里面，在div里面的内容之前  prependTo
+            //$("div").before($("span"));    //div的的前面必须是span
+            //$("span").before($("div"));    //span的前面必须是div
+
+            //区别：后续操纵变了,操纵的都是前面的节点
+            //$("span").insertBefore($("div")).css("background","red");
+            $("div").before($("span")).css("background","red");
+
+        });
+
+    </script>
+</head>
+<body>
+<div>div</div>
+<span>span</span>
+</body>
+</html>

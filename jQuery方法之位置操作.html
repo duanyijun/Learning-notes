@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            overflow: hidden;
+            margin: 20px;
+            position: absolute;
+        }
+
+        #div2 {
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+            background-color: yellow;
+            position: absolute;
+            left: 25px;
+        }
+    </style>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+//        $(function () {
+//          alert($("#div2").offset().left);  //获取屏幕的左距离
+//        });
+
+        $(function () {
+            alert($("#div2").position().left);  //把当前元素转化成类似定位的形式，到父级的left距离
+        });
+
+    </script>
+</head>
+<body>
+
+<div id="div1">
+    <div id="div2"></div>
+</div>
+</body>
+</html>

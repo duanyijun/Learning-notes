@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function () {
+            //$("div").remove();  //删除
+//            $("div").on("mouseover", function () {  //可传自定义事件
+//                alert(123);
+//            })
+
+//            $("div").on({"click":function(){
+//                alert(123);   //鼠标点击弹框
+//            },"mouseover":function(){
+//                alert(456);
+//            }});  //鼠标移入弹框
+
+//            $("div").on("click mouseover", function () {  //可传自定义事件
+//                alert(123);
+//                $("div").off("mouseover"); //不写属性，关闭所有的事件操作，写属性，关闭所写的属性操作
+//                                            // 在上面程序执行完之后
+//            })
+
+            $(document).click(function(){
+                alert($(window).scrollTop());   //滚动距离的获取
+            })
+        });
+
+    </script>
+</head>
+<body style="height: 2000px">
+<div>div</div>
+<span>span</span>
+</body>
+</html>

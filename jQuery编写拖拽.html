@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            background-color: red;
+            margin: 20px;
+        }
+    </style>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<div></div>
+<script>
+    $(function(){
+        var disX = 0;
+        var disY = 0;
+
+        $("div").mousedown(function(ev){
+            disX = ev.pageX - $(this).offset().left;
+            disY = ev.pageY - $(this).offset().top;
+
+            $(document).mousemove(function(ev){
+                $("div").css("left",ev.pageX - disX);
+                $("div").css("top",ev.pageY - disY);
+            });
+            $(document).mouseup(function(){
+                $(document).off();  //关闭操作事件
+            });
+            return false;   //阻止默认事件
+        })
+    })
+</script>
+</body>
+</html>
