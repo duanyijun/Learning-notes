@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--首先先得在html中引入
+<meta name="viewport" content="initial-scale=1,maxmum-scale=1,minmum-scale,width=device-width,user-scalable=no" />-->
+    <meta name="viewport" content="initial-scale=1,maxmum-scale=1,minmum-scale,width=device-width,user-scalable=no" />
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /*适用于移动端的样式重置
+    常见的样式重置，如果在使用中用到再清除
+    */
+    * {
+        padding:0;
+        margin:0 auto;
+    }
+    body,html {
+        min-width:320px;
+        min-height:640px;
+        height:100%;
+        font-size: 12px;
+    }
+    body {
+        font-size: 12px;
+        font-family: "microsoft yahei";
+        -webkit-font-family: "microsoft yahei";
+        -moz-font-family: "microsoft yahei";
+        position: relative;
+    }
+    a {
+        text-decoration:none;
+        cursor: pointer;
+        outline: none;
+    }
+    input {
+        border:none;
+    }
+    ul {
+        list-style-type:none;
+    }
+    i,b,em,strong,dfn {
+        font-style: normal;
+        font-weight: normal;
+    }
+    li, img, label, input {
+        vertical-align: middle;
+    }
+    img{
+        border:none;
+        vertical-align:top;
+    }
+</style>
+<body>
+<script>
+
+//    将px和rem单位之间的转化率设置为48，也就是1rem=48px
+    (function (doc, win) {
+        var docE1 = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange ' : 'resize',
+                recalc = function () {
+                    var clientWidth = docE1.clientWidth;
+                    if (!clientWidth) return;
+                    docE1.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt,recalc,false);
+        doc.addEventListener('DOMContentLoaded',recalc,false);
+    })(document,window);
+</script>
+</body>
+</html>
