@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>纯css div 阴影效果 兼容ie6 id7 ie8 火狐 googlei浏览器 - ab蓝学网 http://www.ablanxue.com/</title>
+
+<style type="text/css">
+.div_shadow{
+width:400px;
+height:250px;
+border:#909090 1px solid;
+background:#fff;
+color:#333;
+text-align:center;line-height:250px;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";  /* For IE 8 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');  /* For IE 5.5 - 7 */
+-moz-box-shadow: 2px 2px 10px #909090;/* for firefox */
+-webkit-box-shadow: 2px 2px 10px #909090;/* for safari or chrome */
+box-shadow:2px 2px 10px #909090;/* for opera or ie9 */
+}
+
+</style>
+</head>
+
+<body>
+<div class="div_shadow">我是有阴影的div</div>
+</body>
+</html>
